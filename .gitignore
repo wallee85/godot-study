@@ -1,0 +1,18 @@
+# Godot
+.godot/
+/android/
+
+# .NET / C#
+bin/
+obj/
+*.user
+*.userprefs
+*.suo
+.vs/
+.mono/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/

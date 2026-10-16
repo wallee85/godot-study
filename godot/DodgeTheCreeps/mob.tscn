@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://rck7aaobtcy5"]
+
+[ext_resource type="Script" uid="uid://hx10e0pxejoj" path="res://Mob.cs" id="1_1qmh0"]
+[ext_resource type="Texture2D" uid="uid://b4jolj4kpa66e" path="res://art/enemyFlyingAlt_1.png" id="1_nokgg"]
+[ext_resource type="Texture2D" uid="uid://dpd7xqdkx7xxi" path="res://art/enemyFlyingAlt_2.png" id="2_ubaqv"]
+[ext_resource type="Texture2D" uid="uid://cjpctg2fhgnun" path="res://art/enemySwimming_1.png" id="3_b3mxk"]
+[ext_resource type="Texture2D" uid="uid://d3gbg1a58k823" path="res://art/enemySwimming_2.png" id="4_1qmh0"]
+[ext_resource type="Texture2D" uid="uid://duw2ad4tnof8j" path="res://art/enemyWalking_1.png" id="5_gfurk"]
+[ext_resource type="Texture2D" uid="uid://bisbm3xqpgt8" path="res://art/enemyWalking_2.png" id="6_ieysi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_afxt5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nokgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ubaqv")
+}],
+"loop": 1,
+"name": &"fly",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_b3mxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1qmh0")
+}],
+"loop": 1,
+"name": &"swim",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_gfurk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ieysi")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 4.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nokgg"]
+radius = 37.0
+height = 100.0
+
+[node name="Mob" type="RigidBody2D" unique_id=384658473 groups=["mobs"]]
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_1qmh0")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1986878558]
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_afxt5")
+animation = &"fly"
+frame_progress = 0.1463471
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1187457425]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_nokgg")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1252534625]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="OnVisibleOnScreenNotifier2DScreenExited"]
