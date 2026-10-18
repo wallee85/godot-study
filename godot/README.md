@@ -175,7 +175,7 @@ dotnet --list-sdks
 **建议**：**没有 C# 强需求就走 GDScript**（能省掉一整类"忘了 Build / 忘了 partial"的问题，而且能发网页）。
 **你已会 C#、且不打算发网页** → 走 C#，跟每章的 C# 代码块。
 
-> **一个节点只能挂一个脚本**，所以"双语言"= 你**选一条走完**，不是两条混着用。（想两条都试，就建两个项目各走一遍。）
+> **一个节点只能挂一个脚本**，所以"双语言"= 你**选一条走完**，不是两条混着用。（想两条都试，就建两个项目各走一遍——本仓库的 [C# 版](./DodgeTheCreeps/) 和 [GDScript 版](./DodgeTheCreepsGD/) 就是这么来的。）
 
 ### 4.3 C# 路线：先把这 6 条记住
 
@@ -220,6 +220,8 @@ dotnet --list-sdks
 
 > ⚠️ **生命周期函数名写错不会报错，只是永远不被调用**——这是最阴的一类 bug。GDScript 全小写、C# 首字母大写。
 
+> 📌 上面的代码块以教程的**简化写法**为主；本仓库的 [GDScript 版成品项目](./DodgeTheCreepsGD/) 已经把代码升级为**全静态类型**（`class_name`、typed `@onready`、`PackedScene` + `as`、警告即错误）。两边的差异和进阶用法见 [GDScript 类型系统与进阶](./GDScript-类型系统与进阶.md)。
+
 ---
 
 ## 5. 官方资源（想深挖时用）
@@ -236,7 +238,8 @@ dotnet --list-sdks
 | 类参考手册（查 API 用这个） | [Class reference](https://docs.godotengine.org/en/stable/classes/index.html) |
 | C# 与 GDScript 的差异（C# 路线必读） | [C# API differences to GDScript](https://docs.godotengine.org/en/stable/tutorials/scripting/c_sharp/c_sharp_differences.html) |
 
-> **本仓库不再保存示例项目副本**——需要时直接点上面的链接看官方仓库（源码永远最新，也不占本地空间）。
+> **本仓库保留了两份练习成品**：[C# 版](./DodgeTheCreeps/) 和 [GDScript 版](./DodgeTheCreepsGD/)。需要最新官方源码时，直接点上面的链接看官方仓库。
+> 想深入 GDScript 的静态类型、`Variant` 边界和性能，见 [GDScript 类型系统与进阶](./GDScript-类型系统与进阶.md)。
 > 官方仓库分支：`master` 对应**下一个 4.x 开发版**，版本对齐分支最新到 `4.3`。你在 4.7.2 上用 `master`。
 
 ---
