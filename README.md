@@ -1,6 +1,6 @@
 # Godot 游戏开发学习笔记
 
-本目录以 Godot 官方教程为主线，配有中文讲解、GDScript 与 C# 示例，以及回合制 Roguelike 进阶内容。
+本目录以 Godot 官方教程为主线，配有中文讲解、GDScript 与 C# 示例、回合制 Roguelike 进阶内容，以及 3D 基础与 Blender 游戏资产管线。
 
 ## 学习内容
 
@@ -13,9 +13,11 @@
 | [Godot 环境、工具与生态指南](./godot/环境与工具生态.md) | 了解语言路线、编辑器、辅助工具、社区框架和插件；软件由你自行选择安装 |
 | [godot/附录-回合制Roguelike/](./godot/附录-回合制Roguelike/README-原Roguelike主线.md) | 进阶内容：Autoload、棋盘生成、回合制移动、动画与游戏流程 |
 | [godot/素材/](./godot/素材/) | 教程用的素材（图片、音频、字体），做 01 章时复制到项目里 |
+| [3d/](./3d/README.md) | 3D 基础 + Blender 游戏资产实战：把 AI 生成的模型清理、重拓扑、UV、材质、绑定并导出到 Godot |
 
 ## 建议顺序
 
 1. 阅读 [Godot 教程总览](./godot/README.md)，按 00–07 章完成官方入门教程。
 2. 需要对照成品时，看本仓库的 [C# 版](./godot/DodgeTheCreeps/) 或 [GDScript 版](./godot/DodgeTheCreepsGD/)；也可以看官方仓库的 [GDScript 版](https://github.com/godotengine/godot-demo-projects/tree/master/2d/dodge_the_creeps) / [C# 版](https://github.com/godotengine/godot-demo-projects/tree/master/mono/dodge_the_creeps) 源码。
 3. 完成主线后，再学习[回合制 Roguelike 附录](./godot/附录-回合制Roguelike/README-原Roguelike主线.md)，或尝试 [GDScript 版 README 里列出的更难官方示例](./godot/DodgeTheCreepsGD/README.md#下一步更难的官方示例)。
+4. 需要做 3D 游戏时，读 [3D 基础与 Blender 实战](./3d/README.md)，按第 9 章完整跑一遍“AI 模型 → Godot 资产”的流程。
