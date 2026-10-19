@@ -15,10 +15,6 @@ run/main_scene="uid://bu4u5hshus26n"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
-
-MCPRuntimeServer="*res://addons/godot_mcp_toolkit/runtime/mcp_runtime_server.gd"
-
 [display]
 
 window/size/viewport_width=480
@@ -28,10 +24,6 @@ window/stretch/mode="canvas_items"
 [dotnet]
 
 project/assembly_name="DodgeTheCreeps"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/godot_mcp_toolkit/plugin.cfg")
 
 [input]
 
